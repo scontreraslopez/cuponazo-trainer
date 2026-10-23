@@ -4,6 +4,7 @@ import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
@@ -32,3 +33,15 @@ val Typography = Typography(
     )
     */
 )
+
+val Typography.numeroCupon: TextStyle
+    get() = displayLarge.copy(
+        fontWeight = FontWeight.Black,
+        lineHeightStyle = LineHeightStyle(
+            alignment = LineHeightStyle.Alignment.Center,
+            trim = LineHeightStyle.Trim.Both,
+        ),
+        fontSize = 20.sp,
+        letterSpacing = 0.5.sp,
+        fontFeatureSettings = "tnum", // dígitos de ancho fijo: "11" y "88" ocupan lo mismo
+    )
