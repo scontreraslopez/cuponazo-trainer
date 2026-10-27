@@ -21,7 +21,9 @@ import net.iessochoa.sergiocontreras.cuponazotrainer.ui.theme.CuponazoTrainerThe
 fun CuponazoTrainerApp() {
     CuponazoTrainerTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            MainScreen(modifier = Modifier.padding(innerPadding))
+            MainScreen(modifier = Modifier
+                .padding(innerPadding)
+            )
         }
     }
 }

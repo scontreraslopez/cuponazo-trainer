@@ -35,7 +35,7 @@ fun TerminacionCard(
     ) {
     Card(
         modifier = modifier
-            .size(width = 150.dp, height = 300.dp),
+            .size(width = 160.dp, height = 150.dp),
         border = BorderStroke(
             width = 1.dp,
             color = Color.Black
@@ -60,12 +60,15 @@ fun TerminacionCard(
             }
             HorizontalDivider(
                 thickness = 1.dp,
-                color = Color.Black
+                color = Color.Black,
+                modifier = Modifier.weight(1f)
             )
             Text(
                 text = nombre,
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center
+                modifier = Modifier.fillMaxWidth()
+                    .padding(bottom=4.dp),
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.headlineSmall
             )
         }
 
@@ -76,6 +79,6 @@ fun TerminacionCard(
 @Preview(showBackground = true)
 @Composable
 fun TerminacionCardPreview() = TerminacionCard(
-    codigo = "25",
-    nombre = "el cañón"
+    codigo = "88",
+    nombre = "les mamelles"
 )
