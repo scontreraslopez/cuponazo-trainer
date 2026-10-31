@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import net.iessochoa.sergiocontreras.cuponazotrainer.data.NumerosInMemoryRepository
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.components.TerminacionCard
+import net.iessochoa.sergiocontreras.cuponazotrainer.ui.components.imagen
 
 /**
  * Project: Cuponazo Trainer
@@ -51,7 +52,8 @@ fun MainScreen(
     ) {
         TerminacionCard(
             codigo = terminacion.codigo,
-            nombre = terminacion.nombre
+            nombre = terminacion.nombre,
+            cardImage = terminacion.imagen
         )
         Spacer(
             modifier = Modifier.height(8.dp)
