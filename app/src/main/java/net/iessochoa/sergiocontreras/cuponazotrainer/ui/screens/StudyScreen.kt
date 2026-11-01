@@ -3,16 +3,21 @@ package net.iessochoa.sergiocontreras.cuponazotrainer.ui.screens
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import net.iessochoa.sergiocontreras.cuponazotrainer.data.NumerosInMemoryRepository
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.components.TerminacionCard
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.components.imagen
+import net.iessochoa.sergiocontreras.cuponazotrainer.ui.theme.CuponazoTrainerTheme
 
 /**
  * Project: Cuponazo Trainer
@@ -35,7 +40,8 @@ fun StudyScreen(
     ) {
         allTerminaciones.chunked(2).forEach { pair ->
             Row(
-                horizontalArrangement = Arrangement.SpaceBetween
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceAround
             ) {
                 pair.forEach { terminacion ->
                     TerminacionCard(
@@ -45,8 +51,18 @@ fun StudyScreen(
                     )
                 }
             }
-
+            Spacer(modifier=Modifier.height(16.dp))
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun StudyScreenPreview() {
+    CuponazoTrainerTheme() {
+        StudyScreen(
+
+        )
     }
 }
 
