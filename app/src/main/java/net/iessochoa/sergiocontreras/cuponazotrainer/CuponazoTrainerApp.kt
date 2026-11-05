@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.screens.MainScreen
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.screens.StudyScreen
+import net.iessochoa.sergiocontreras.cuponazotrainer.ui.screens.StudyScreenLazyGrid
 import net.iessochoa.sergiocontreras.cuponazotrainer.ui.theme.CuponazoTrainerTheme
 
 /**
@@ -23,9 +24,11 @@ fun CuponazoTrainerApp() {
     CuponazoTrainerTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             //MainScreen(modifier = Modifier
-            StudyScreen(modifier = Modifier
+           // StudyScreen(modifier = Modifier
+            StudyScreenLazyGrid( modifier = Modifier
                 .padding(innerPadding)
             )
+
         }
     }
 }
